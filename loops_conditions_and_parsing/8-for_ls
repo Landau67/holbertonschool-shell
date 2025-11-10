@@ -1,0 +1,5 @@
+#!/usr/bin/env bash 
+#ubhnmk
+for file in * ; do 
+	echo "$file" | cut -d'-' -f2-
+done
