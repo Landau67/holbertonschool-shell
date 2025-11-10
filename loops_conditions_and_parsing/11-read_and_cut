@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+#drftgyhujik
+while IFS=: read -r username password uid gid gecos home shell; do
+    echo "$username:$uid:$home"
+done < /etc/passwd
