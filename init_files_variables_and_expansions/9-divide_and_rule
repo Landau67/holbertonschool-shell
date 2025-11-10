@@ -1,2 +1,2 @@
 #!/bin/bash
-export $POWER / $DEVIDE
+echo $(( $POWER / $DIVIDE ))
