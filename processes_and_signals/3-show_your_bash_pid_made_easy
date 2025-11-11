@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Alternative version using /proc directory
+for proc in /proc/[0-9]*; do
+    if [ -f "$proc/comm" ] && grep -q "bash" "$proc/comm" 2>/dev/null; then
+        pid=$(basename "$proc")
+        comm=$(cat "$proc/comm")
+        echo "$pid $comm"
+    fi
+done
