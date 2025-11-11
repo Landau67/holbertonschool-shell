@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Use SIGKILL to force kill the process (bypasses signal traps)
+pkill -9 -f "7-highlander"
