@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 # Create PID file
+if [[ $EUID -ne 0 ]]; then
+    exec sudo "$0" "$@"
+fi
 echo $$ > /var/run/myscript.pid
 # Define cleanup function
 cleanup() {
